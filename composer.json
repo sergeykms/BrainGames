@@ -16,5 +16,7 @@
             "email": "serpp@me.com"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.21"
+    }
 }
