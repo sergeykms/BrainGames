@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "Brain Games",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Popov Sergey",
+            "email": "serpp@me.com"
+        }
+    ],
+    "require": {}
+}
