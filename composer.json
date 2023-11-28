@@ -7,6 +7,9 @@
             "Hexlet\\Code\\": "src/"
         }
     },
+    "bin": [
+        "bin/brain-games"
+      ],
     "authors": [
         {
             "name": "Popov Sergey",
