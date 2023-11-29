@@ -1,7 +1,8 @@
 {
     "name": "hexlet/code",
-    "description": "Brain Games",
+    "description": "BrainGames",
     "license": "MIT",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -11,7 +12,8 @@
         ]
     },
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
       ],
     "authors": [
         {

@@ -4,6 +4,9 @@ install: # install project Brain Games
 brain-games: # output of the greeting
 	./bin/brain-games
 
+brain-even: # checking a number for parity
+	./bin/brain-even
+
 validate: # validate composer.json
 	composer validate
 
