@@ -18,3 +18,5 @@ https://asciinema.org/a/itMXE9ZNKD07tsUyXPH0bpHbr
 ### make brain-even
 https://asciinema.org/connect/e7714945-0e07-457d-884d-58c27b54f169
 
+### make brain-calc
+https://asciinema.org/a/XvYSR53h5C2HVajIHLmwFdQvp

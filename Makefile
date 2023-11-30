@@ -7,8 +7,14 @@ brain-games: # output of the greeting
 brain-even: # checking a number for parity
 	./bin/brain-even
 
+brain-calc: # result of the expression
+	./bin/brain-calc
+
 validate: # validate composer.json
 	composer validate
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+
+auto:
+	composer dump-autoload

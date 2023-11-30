@@ -5,15 +5,19 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
+            "Sergeykms\\Code\\": "src/"
         },
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/Engine.php",
+            "src/Games/BrainCalc.php",
+            "src/Games/BrainEven.php"
         ]
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
       ],
     "authors": [
         {
