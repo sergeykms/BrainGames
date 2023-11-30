@@ -10,6 +10,9 @@ brain-even: # checking a number for parity
 brain-calc: # result of the expression
 	./bin/brain-calc
 
+brain-gcd: # greatest common divisor of given numbers
+	./bin/brain-gcd
+
 validate: # validate composer.json
 	composer validate
 
