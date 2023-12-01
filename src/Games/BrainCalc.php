@@ -10,10 +10,8 @@ use function BrainGames\Engine\mathOperation;
 function brainCalc()
 {
     $name = greeteng('What is the result of the expression?');
-
-    $arrayOfOperation = ['+', '-', '*'];
     for ($i = 1; $i <= 3; $i++) {
-        [$question, $correctAnswer] = mathOperation(rand(1, 100), rand(1, 100), $arrayOfOperation[rand(0, 2)]);
+        [$question, $correctAnswer] = mathOperation();
         if (!engine($name, $question, $correctAnswer)) {
             return;
         };

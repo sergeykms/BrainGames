@@ -20,3 +20,6 @@ https://asciinema.org/connect/e7714945-0e07-457d-884d-58c27b54f169
 
 ### make brain-calc
 https://asciinema.org/a/XvYSR53h5C2HVajIHLmwFdQvp
+
+### make brain-gcd
+https://asciinema.org/a/GEFHIUwNY8jwBmiFPVF2dDbKJ

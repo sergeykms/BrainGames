@@ -26,8 +26,13 @@ function engine($name, $question, $correctAnswer)
     return true;
 }
 
-function mathOperation($x, $y, $operation)
+// Математические операции
+function mathOperation()
 {
+    $arrayOfOperation = ['+', '-', '*'];
+    $operation = $arrayOfOperation[rand(0, 2)];
+    $x = rand(1, 100);
+    $y = rand(1, 100);
     $answer = "{$x} {$operation} {$y}";
     switch ($operation) {
         case '-':
@@ -36,5 +41,18 @@ function mathOperation($x, $y, $operation)
             return [$answer, strval($x + $y)];
         case '*':
             return [$answer, strval($x * $y)];
+    };
+}
+
+// Наибольший общий делитель
+function largestDivisor()
+{
+    $x = rand(1, 100);
+    $y = rand(1, 100);
+    $temp = $x <= $y ? $x : $y;
+    for($i = $temp; $i >= 1; $i--) {
+        if($x % $i === 0 && $y % $i === 0) {
+            return ["{$x} {$y}", strval($i)];
+        };
     };
 }

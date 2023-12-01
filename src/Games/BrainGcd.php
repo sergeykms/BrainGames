@@ -5,15 +5,13 @@ namespace BrainGames\Games\BrainGcd;
 use function cli\line;
 use function BrainGames\Cli\greeteng;
 use function BrainGames\Engine\engine;
-use function BrainGames\Engine\mathOperation;
+use function BrainGames\Engine\largestDivisor;
 
-function brainCalc()
+function brainGcd()
 {
-    $name = greeteng('What is the result of the expression?');
-
-    $arrayOfOperation = ['+', '-', '*'];
+    $name = greeteng('Find the greatest common divisor of given numbers.');
     for ($i = 1; $i <= 3; $i++) {
-        [$question, $correctAnswer] = mathOperation(rand(1, 100), rand(1, 100), $arrayOfOperation[rand(0, 2)]);
+        [$question, $correctAnswer] = largestDivisor();
         if (!engine($name, $question, $correctAnswer)) {
             return;
         };
