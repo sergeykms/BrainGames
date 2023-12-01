@@ -67,7 +67,7 @@ function missingProgression()
     $arrayProgression = []; // массив прогресии
     for ($i = 1, $j = $firstElementProgression; $i <= 10; $i++, $j += $stepProgression) {
         if ($i === $missingStepProgression) {
-            $arrayProgression[] = '...';
+            $arrayProgression[] = '..';
             $missingElementProgression = strval($j);
         } else {
             $arrayProgression[] = strval($j);
