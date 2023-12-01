@@ -2,8 +2,8 @@
 
 namespace BrainGames\Games\BrainProgression;
 
-use function cli\line;
 use function BrainGames\Cli\greeteng;
+use function cli\line;
 use function BrainGames\Engine\engine;
 use function BrainGames\Engine\missingProgression;
 

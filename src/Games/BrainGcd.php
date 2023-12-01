@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\BrainGcd;
 
-use function cli\line;
 use function BrainGames\Cli\greeteng;
 use function BrainGames\Engine\engine;
+use function cli\line;
 use function BrainGames\Engine\largestDivisor;
 
 function brainGcd()
