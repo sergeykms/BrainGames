@@ -1,8 +1,10 @@
 <?php
 namespace BrainGames\Games\BrainEven;
+
 use function BrainGames\Cli\greeteng;
 use function BrainGames\Engine\engine;
 use function cli\line;
+
 function brainEven()
 {
     $name = greeteng('Answer "yes" if the number is even, otherwise answer "no".');

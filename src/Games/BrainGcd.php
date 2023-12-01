@@ -1,9 +1,12 @@
 <?php
+
 namespace BrainGames\Games\BrainGcd;
+
 use function BrainGames\Engine\largestDivisor;
 use function BrainGames\Cli\greeteng;
 use function BrainGames\Engine\engine;
 use function cli\line;
+
 function brainGcd()
 {
     $name = greeteng('Find the greatest common divisor of given numbers.');
