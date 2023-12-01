@@ -13,6 +13,9 @@ brain-calc: # result of the expression
 brain-gcd: # greatest common divisor of given numbers
 	./bin/brain-gcd
 
+brain-progression: # number is missing in the progression
+	./bin/brain-progression
+
 validate: # validate composer.json
 	composer validate
 

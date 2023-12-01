@@ -23,3 +23,6 @@ https://asciinema.org/a/XvYSR53h5C2HVajIHLmwFdQvp
 
 ### make brain-gcd
 https://asciinema.org/a/GEFHIUwNY8jwBmiFPVF2dDbKJ
+
+### make brain-progression
+https://asciinema.org/a/KiHzR9jQZa1nrs9ytheSOfkAy
