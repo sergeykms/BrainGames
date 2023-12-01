@@ -15,7 +15,7 @@ use function cli\prompt;
 
 function engine(string $name, string $question, string $correctAnswer)
 {
-    line('Question: ' . $question); 
+    line('Question: ' . $question);
     $answer = prompt('Your answer');
     if ($correctAnswer !== $answer) {
         line("'" . $answer . "'" . " is wrong answer ;(. Correct answer was: " . "'" . $correctAnswer . "'");
