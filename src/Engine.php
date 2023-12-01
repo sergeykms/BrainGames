@@ -73,5 +73,17 @@ function missingProgression()
             $arrayProgression[] = strval($j);
         };
     };
-    return([implode(" ", $arrayProgression), $missingElementProgression]);
+    return [implode(" ", $arrayProgression), $missingElementProgression];
+}
+
+// Простое число
+function primeNumber()
+{
+    $checkNumber = rand(1, 500);
+    for ($i = 2; $i < $checkNumber; $i++) {
+        if ($checkNumber % $i === 0) {
+            return [$checkNumber, 'no'];
+        };
+    };
+    return [$checkNumber, 'yes'];
 }

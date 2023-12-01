@@ -16,6 +16,9 @@ brain-gcd: # greatest common divisor of given numbers
 brain-progression: # number is missing in the progression
 	./bin/brain-progression
 
+brain-prime: # number is prime
+	./bin/brain-prime
+
 validate: # validate composer.json
 	composer validate
 

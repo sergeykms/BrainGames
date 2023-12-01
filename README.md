@@ -13,16 +13,19 @@ make install
 ```
 
 ### make install
-https://asciinema.org/a/itMXE9ZNKD07tsUyXPH0bpHbr
+Демо https://asciinema.org/a/itMXE9ZNKD07tsUyXPH0bpHbr
 
 ### make brain-even
-https://asciinema.org/connect/e7714945-0e07-457d-884d-58c27b54f169
+Демо https://asciinema.org/connect/e7714945-0e07-457d-884d-58c27b54f169
 
 ### make brain-calc
-https://asciinema.org/a/XvYSR53h5C2HVajIHLmwFdQvp
+Демо https://asciinema.org/a/XvYSR53h5C2HVajIHLmwFdQvp
 
 ### make brain-gcd
-https://asciinema.org/a/GEFHIUwNY8jwBmiFPVF2dDbKJ
+Демо https://asciinema.org/a/GEFHIUwNY8jwBmiFPVF2dDbKJ
 
 ### make brain-progression
-https://asciinema.org/a/KiHzR9jQZa1nrs9ytheSOfkAy
+Демо https://asciinema.org/a/KiHzR9jQZa1nrs9ytheSOfkAy
+
+### make brain-prime
+Демо https://asciinema.org/a/1roaZCCmBckQ6x0ObhZ5xcV09
