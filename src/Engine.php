@@ -33,14 +33,14 @@ function mathOperation()
     $operation = $arrayOfOperation[rand(0, 2)];
     $x = rand(1, 100);
     $y = rand(1, 100);
-    $answer = "{$x} {$operation} {$y}";
+    $question = "{$x} {$operation} {$y}";
     switch ($operation) {
         case '-':
-            return [$answer, strval($x - $y)];
+            return [$question, strval($x - $y)];
         case '+':
-            return [$answer, strval($x + $y)];
+            return [$question, strval($x + $y)];
         case '*':
-            return [$answer, strval($x * $y)];
+            return [$question, strval($x * $y)];
     };
 }
 
@@ -85,5 +85,5 @@ function primeNumber()
             return [$checkNumber, 'no'];
         };
     };
-    return [$checkNumber, 'yes'];
+    return [strval($checkNumber), 'yes'];
 }

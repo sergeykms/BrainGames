@@ -11,7 +11,7 @@ function brainEven()
     $name = greeteng('Answer "yes" if the number is even, otherwise answer "no".');
 
     for ($i = 1; $i <= 3; $i++) {
-        $question = rand(1, 100);
+        $question = strval(rand(1, 100));
         $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
         if (!engine($name, $question, $correctAnswer)) {
             return;
