@@ -1,5 +1,4 @@
 <?php
-
 namespace BrainGames\Games\BrainEven;
 
 use function BrainGames\Cli\greeteng;
