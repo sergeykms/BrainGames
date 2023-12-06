@@ -2,19 +2,34 @@
 
 namespace BrainGames\Games\BrainCalc;
 
-use function BrainGames\Engine\mathOperation;
-use function BrainGames\Cli\greeteng;
-use function BrainGames\Engine\engine;
-use function cli\line;
+use function BrainGames\Engine\startGame;
+
+// Математические операции
+function mathOperation()
+{
+    $arrayOfOperation = ['+', '-', '*'];
+    $operation = $arrayOfOperation[rand(0, 2)];
+    $x = rand(1, 100);
+    $y = rand(1, 100);
+    $question = "{$x} {$operation} {$y}";
+    switch ($operation) {
+        case '-':
+            return [$question, strval($x - $y)];
+        case '+':
+            return [$question, strval($x + $y)];
+        case '*':
+            return [$question, strval($x * $y)];
+    };
+}
 
 function brainCalc()
 {
-    $name = greeteng('What is the result of the expression?');
-    for ($i = 1; $i <= 3; $i++) {
-        [$question, $correctAnswer] = mathOperation();
-        if (!engine($name, $question, $correctAnswer)) {
-            return;
-        };
+    $nameGame = 'What is the result of the expression?';
+    $dataGame = [];
+    $countRounds = 3;
+
+    for ($i = 1; $i <= $countRounds; $i++) {
+        $dataGame[] = mathOperation();
     };
-    line('Congratulations, ' . $name . '!');
+    startGame($nameGame, $dataGame);
 }

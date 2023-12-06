@@ -12,6 +12,26 @@ if (file_exists($autoloadPath1)) {
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Cli\greeteng;
+
+
+function startGame(string $nameGame, array $dataGame)
+{
+    $name = greeteng($nameGame);
+    foreach($dataGame as $items) {
+        [$question, $correctAnswer] = $items;
+        line('Question: ' . $question);
+        $answer = prompt('Your answer');
+        if ($correctAnswer !== $answer) {
+            line("'" . $answer . "'" . " is wrong answer ;(. Correct answer was: " . "'" . $correctAnswer . "'");
+            line("Let's try again, " . $name . '!');
+            return false;
+        };
+        line('Correct!');
+    };
+    line('Congratulations, ' . $name . '!');
+}
+
 
 function engine(string $name, string $question, string $correctAnswer)
 {
@@ -26,23 +46,7 @@ function engine(string $name, string $question, string $correctAnswer)
     return true;
 }
 
-// Математические операции
-function mathOperation()
-{
-    $arrayOfOperation = ['+', '-', '*'];
-    $operation = $arrayOfOperation[rand(0, 2)];
-    $x = rand(1, 100);
-    $y = rand(1, 100);
-    $question = "{$x} {$operation} {$y}";
-    switch ($operation) {
-        case '-':
-            return [$question, strval($x - $y)];
-        case '+':
-            return [$question, strval($x + $y)];
-        case '*':
-            return [$question, strval($x * $y)];
-    };
-}
+
 
 // Наибольший общий делитель
 function largestDivisor()
