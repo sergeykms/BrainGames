@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-include ("./src/Runner.php");
+include ("brain-runner");
 
 use function BrainGames\Games\BrainProgression\brainProgression;
 
