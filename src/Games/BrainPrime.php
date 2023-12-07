@@ -2,19 +2,28 @@
 
 namespace BrainGames\Games\BrainPrime;
 
-use function BrainGames\Engine\primeNumber;
-use function BrainGames\Engine\engine;
-use function cli\line;
-use function BrainGames\Cli\greeteng;
+use function BrainGames\Engine\startGame;
+
+// Простое число
+function primeNumber()
+{
+    $checkNumber = rand(1, 500);
+    for ($i = 2; $i < $checkNumber; $i++) {
+        if ($checkNumber % $i === 0) {
+            return [$checkNumber, 'no'];
+        };
+    };
+    return [strval($checkNumber), 'yes'];
+}
 
 function brainPrime()
 {
-    $name = greeteng('Answer "yes" if given number is prime. Otherwise answer "no".');
-    for ($i = 1; $i <= 3; $i++) {
-        [$question, $correctAnswer] = primeNumber();
-        if (!engine($name, $question, $correctAnswer)) {
-            return;
-        };
+    $nameGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $dataGame = [];
+    $countRounds = 3;
+
+    for ($i = 1; $i <= $countRounds; $i++) {
+        $dataGame[] = primeNumber();
     };
-    line('Congratulations, ' . $name . '!');
+    startGame($nameGame, $dataGame);
 }

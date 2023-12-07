@@ -2,20 +2,18 @@
 
 namespace BrainGames\Games\BrainEven;
 
-use function BrainGames\Cli\greeteng;
-use function BrainGames\Engine\engine;
-use function cli\line;
+use function BrainGames\Engine\startGame;
 
 function brainEven()
 {
-    $name = greeteng('Answer "yes" if the number is even, otherwise answer "no".');
+    $nameGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $dataGame = [];
+    $countRounds = 3;
 
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 1; $i <= $countRounds; $i++) {
         $question = strval(rand(1, 100));
         $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
-        if (!engine($name, $question, $correctAnswer)) {
-            return;
-        };
+        $dataGame[] = [$question, $correctAnswer];
     };
-    line('Congratulations, ' . $name . '!');
+    startGame($nameGame, $dataGame);
 }

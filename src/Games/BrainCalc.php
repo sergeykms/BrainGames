@@ -19,6 +19,8 @@ function mathOperation()
             return [$question, strval($x + $y)];
         case '*':
             return [$question, strval($x * $y)];
+        default:
+            return ["2 * 2", "4"];
     };
 }
 

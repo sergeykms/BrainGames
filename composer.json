@@ -4,10 +4,8 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": {
-            "Sergeykms\\Code\\": "src/"
-        },
         "files": [
+            "src/Runner.php",
             "src/Cli.php",
             "src/Engine.php",
             "src/Games/BrainCalc.php",
