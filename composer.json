@@ -5,7 +5,6 @@
     "minimum-stability": "dev",
     "autoload": {
         "files": [
-            "src/Runner.php",
             "src/Cli.php",
             "src/Engine.php",
             "src/Games/BrainCalc.php",
