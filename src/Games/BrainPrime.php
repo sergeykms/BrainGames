@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\BrainPrime;
 
-require_once './src/config.php';
+use BrainGames\Engine\COUNT_ROUNDS;
 
 use function BrainGames\Engine\startGame;
 

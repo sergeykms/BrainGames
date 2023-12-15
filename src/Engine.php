@@ -6,6 +6,8 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Cli\greeteng;
 
+define('COUNT_ROUNDS', 3); // Количество раундов в игре
+
 function startGame(string $nameGame, array $dataGame)
 {
     $name = greeteng();
