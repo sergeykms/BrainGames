@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\BrainCalc;
 
+require_once './src/config.php';
+
 use function BrainGames\Engine\startGame;
 
 // Математические операции
@@ -20,7 +22,7 @@ function mathOperation()
         case '*':
             return [$question, strval($x * $y)];
         default:
-            return ["2 * 2", "4"];
+            return ['', ''];
     };
 }
 
@@ -28,10 +30,13 @@ function brainCalc()
 {
     $nameGame = 'What is the result of the expression?';
     $dataGame = [];
-    $countRounds = 3;
 
-    for ($i = 1; $i <= $countRounds; $i++) {
-        $dataGame[] = mathOperation();
+    for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
+        if (mathOperation()) {
+            $dataGame[] = mathOperation();
+        } else {
+            $dataGame = [];      
+        };
     };
     startGame($nameGame, $dataGame);
 }
