@@ -2,9 +2,8 @@
 
 namespace BrainGames\Games\BrainGcd;
 
-require_once 'src/config.php';
-
 use function BrainGames\Engine\startGame;
+use BrainGames\Engine\COUNT_ROUNDS;
 
 // Наибольший общий делитель
 function largestDivisor()

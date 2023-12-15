@@ -2,9 +2,8 @@
 
 namespace BrainGames\Games\BrainCalc;
 
-require_once 'src/config.php';
-
 use function BrainGames\Engine\startGame;
+use BrainGames\Engine\COUNT_ROUNDS;
 
 // Математические операции
 function mathOperation()
