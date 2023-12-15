@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\BrainProgression;
 
-require_once './src/config.php';
+require_once 'src/config.php';
 
 use function BrainGames\Engine\startGame;
 
