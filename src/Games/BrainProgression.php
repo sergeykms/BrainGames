@@ -2,8 +2,9 @@
 
 namespace BrainGames\Games\BrainProgression;
 
-use function BrainGames\Engine\startGame;
 use BrainGames\Engine\COUNT_ROUNDS;
+
+use function BrainGames\Engine\startGame;
 
 function missingProgression()
 {

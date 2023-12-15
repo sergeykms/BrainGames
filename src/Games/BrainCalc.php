@@ -2,8 +2,9 @@
 
 namespace BrainGames\Games\BrainCalc;
 
-use function BrainGames\Engine\startGame;
 use BrainGames\Engine\COUNT_ROUNDS;
+
+use function BrainGames\Engine\startGame;
 
 // Математические операции
 function mathOperation()
@@ -34,7 +35,7 @@ function brainCalc()
         if (mathOperation()) {
             $dataGame[] = mathOperation();
         } else {
-            $dataGame = [];      
+            $dataGame = [];
         };
     };
     startGame($nameGame, $dataGame);

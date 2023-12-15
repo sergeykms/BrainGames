@@ -2,8 +2,9 @@
 
 namespace BrainGames\Games\BrainGcd;
 
-use function BrainGames\Engine\startGame;
 use BrainGames\Engine\COUNT_ROUNDS;
+
+use function BrainGames\Engine\startGame;
 
 // Наибольший общий делитель
 function largestDivisor()
