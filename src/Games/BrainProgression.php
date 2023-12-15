@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\BrainProgression;
 
+require_once './src/config.php';
+
 use function BrainGames\Engine\startGame;
 
 function missingProgression()
@@ -26,9 +28,8 @@ function brainProgression()
 {
     $nameGame = 'What number is missing in the progression?';
     $dataGame = [];
-    $countRounds = 3;
 
-    for ($i = 1; $i <= $countRounds; $i++) {
+    for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         $dataGame[] = missingProgression();
     };
     startGame($nameGame, $dataGame);

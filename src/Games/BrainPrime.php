@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\BrainPrime;
 
+require_once './src/config.php';
+
 use function BrainGames\Engine\startGame;
 
 // Простое число
@@ -20,9 +22,8 @@ function brainPrime()
 {
     $nameGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $dataGame = [];
-    $countRounds = 3;
 
-    for ($i = 1; $i <= $countRounds; $i++) {
+    for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         $dataGame[] = primeNumber();
     };
     startGame($nameGame, $dataGame);

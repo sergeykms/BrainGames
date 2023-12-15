@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\BrainGcd;
 
+require_once './src/config.php';
+
 use function BrainGames\Engine\startGame;
 
 // Наибольший общий делитель
@@ -21,9 +23,8 @@ function brainGcd()
 {
     $nameGame = 'Find the greatest common divisor of given numbers.';
     $dataGame = [];
-    $countRounds = 3;
 
-    for ($i = 1; $i <= $countRounds; $i++) {
+    for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
         $dataGame[] = largestDivisor();
     };
     startGame($nameGame, $dataGame);
