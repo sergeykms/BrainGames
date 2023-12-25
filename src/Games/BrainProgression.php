@@ -2,26 +2,26 @@
 
 namespace BrainGames\Games\BrainProgression;
 
-use BrainGames\Engine\COUNT_ROUNDS;
+const BEGIN_OF_RANGE = 1;
+const END_OF_RANGE = 500;
+const COUNT_ROUNDS = 3;
+
+const BEGIN_OF_STEP = 1;
+const END_OF_STEP = 10;
+
+const COUNT_OF_STEP = 9; // число шагов
+
 
 use function BrainGames\Engine\startGame;
 
 function missingProgression()
 {
-    $firstElementProgression = rand(1, 100); // первый элемент прогресии
-    $stepProgression = rand(1, 10); // швг прогрессии
-    $missingElementProgression = rand(1, 9); // пропущенный элемент прогресии
-    $missingStepProgression = rand(1, 9); // пропущенный шаг прогресии
-    $arrayProgression = []; // массив прогресии
-    for ($i = 1, $j = $firstElementProgression; $i <= 10; $i++, $j += $stepProgression) {
-        if ($i === $missingStepProgression) {
-            $arrayProgression[] = '..';
-            $missingElementProgression = strval($j);
-        } else {
-            $arrayProgression[] = strval($j);
-        };
-    };
-    return [implode(" ", $arrayProgression), $missingElementProgression];
+    $firstElementProgression = rand(BEGIN_OF_RANGE, END_OF_RANGE); // первый элемент прогресии
+    $stepProgression = rand(BEGIN_OF_STEP, END_OF_STEP); // швг прогрессии
+    $lastElementProgression = $firstElementProgression + ($stepProgression * COUNT_OF_STEP); // последний элемент
+    $missingStepProgression = rand(0, COUNT_OF_STEP); // пропущенный шаг прогресии
+    $arrayProgression = range($firstElementProgression, $lastElementProgression, $stepProgression);
+    return [$arrayProgression, $missingStepProgression];
 }
 
 function brainProgression()
@@ -30,7 +30,11 @@ function brainProgression()
     $dataGame = [];
 
     for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
-        $dataGame[] = missingProgression();
-    };
+        [$arrayProgression, $missingStepProgression] = missingProgression();
+        $missingElementProgression = $arrayProgression[$missingStepProgression]; // пропущенный элемент прогресии
+        $arrayProgression[$missingStepProgression] = ".."; // замена
+        $dataGame[] =  [implode(" ", $arrayProgression), (string) $missingElementProgression];
+    }
+
     startGame($nameGame, $dataGame);
 }
