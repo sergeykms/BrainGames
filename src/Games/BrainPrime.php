@@ -2,20 +2,22 @@
 
 namespace BrainGames\Games\BrainPrime;
 
-use BrainGames\Engine\COUNT_ROUNDS;
+const BEGIN_OF_RANGE = 1;
+const END_OF_RANGE = 500;
+const START_ROUND = 1;
+const COUNT_ROUNDS = 3;
 
 use function BrainGames\Engine\startGame;
 
 // Простое число
-function primeNumber()
+function primeNumber(int $NumberToCheck)
 {
-    $checkNumber = rand(1, 500);
-    for ($i = 2; $i < $checkNumber; $i++) {
-        if ($checkNumber % $i === 0) {
-            return [$checkNumber, 'no'];
-        };
-    };
-    return [strval($checkNumber), 'yes'];
+    for ($i = 2; $i < $NumberToCheck; $i++) {
+        if ($NumberToCheck % $i === 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
 function brainPrime()
@@ -23,8 +25,11 @@ function brainPrime()
     $nameGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $dataGame = [];
 
-    for ($i = 1; $i <= COUNT_ROUNDS; $i++) {
-        $dataGame[] = primeNumber();
-    };
+    for ($i = START_ROUND; $i <= COUNT_ROUNDS; $i++) {
+        $NumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
+        $correctAnswer = primeNumber($NumberToCheck) ? 'yes' : 'no';
+
+        $dataGame[] = [$NumberToCheck, $correctAnswer];
+    }
     startGame($nameGame, $dataGame);
 }
