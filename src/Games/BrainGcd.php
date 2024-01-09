@@ -3,11 +3,11 @@
 namespace BrainGames\Games\BrainGcd;
 
 use function BrainGames\Engine\startGame;
+use const BrainGames\Engine\COUNT_ROUNDS;
 
 const BEGIN_OF_RANGE = 1;
 const END_OF_RANGE = 10;
 const START_ROUND = 1;
-const COUNT_ROUNDS = 3;
 
 // Наибольший общий делитель
 function findLargestDivisor(int $x, int $y)

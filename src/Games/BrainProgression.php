@@ -1,14 +1,12 @@
 <?php
 
 namespace BrainGames\Games\BrainProgression;
+use const BrainGames\Engine\COUNT_ROUNDS;
 
 const BEGIN_OF_RANGE = 1;
 const END_OF_RANGE = 500;
-const COUNT_ROUNDS = 3;
-
 const BEGIN_OF_STEP = 1;
 const END_OF_STEP = 10;
-
 const COUNT_OF_STEP = 9; // число шагов
 
 

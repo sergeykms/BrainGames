@@ -2,6 +2,8 @@
 
 namespace BrainGames\Engine;
 
+const COUNT_ROUNDS = 3; // Количество раундов
+
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Cli\greeting;

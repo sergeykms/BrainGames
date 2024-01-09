@@ -3,11 +3,11 @@
 namespace BrainGames\Games\BrainEven;
 
 use function BrainGames\Engine\startGame;
+use const BrainGames\Engine\COUNT_ROUNDS;
 
 const BEGIN_OF_RANGE = 1;
 const END_OF_RANGE = 100;
 const START_ROUND = 1;
-const COUNT_ROUNDS = 3;
 
 function isEven(int $numberToCheck)
 {
