@@ -1,13 +1,13 @@
 <?php
 
 namespace BrainGames\Games\BrainPrime;
-use const BrainGames\Engine\COUNT_ROUNDS;
 
 const BEGIN_OF_RANGE = 1;
 const END_OF_RANGE = 500;
 const START_ROUND = 1;
 
 use function BrainGames\Engine\startGame;
+use const BrainGames\Engine\COUNT_ROUNDS;
 
 // Простое число
 function isPrimeNumber(int $numberToCheck)
