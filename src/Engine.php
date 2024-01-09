@@ -2,16 +2,14 @@
 
 namespace BrainGames\Engine;
 
+const COUNT_ROUNDS = 3; // Количество раундов
+
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Cli\greeting;
 
 function startGame(string $nameGame, array $dataGame)
 {
-    if (count($dataGame) === 0) {
-        echo("Invalid operation\n");
-        return;
-    };
     $name = greeting();
     line($nameGame);
     foreach ($dataGame as $items) {
@@ -21,7 +19,7 @@ function startGame(string $nameGame, array $dataGame)
         if ($correctAnswer !== $answer) {
             line("'" . $answer . "'" . " is wrong answer ;(. Correct answer was: " . "'" . $correctAnswer . "'");
             line("Let's try again, " . $name . '!');
-            return false;
+            return;
         }
         line('Correct!');
     }

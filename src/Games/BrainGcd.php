@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\BrainGcd;
 
-use function BrainGames\Engine\startGame;
-
 const BEGIN_OF_RANGE = 1;
 const END_OF_RANGE = 10;
 const START_ROUND = 1;
-const COUNT_ROUNDS = 3;
+
+use function BrainGames\Engine\startGame;
+use const BrainGames\Engine\COUNT_ROUNDS;
 
 // Наибольший общий делитель
 function findLargestDivisor(int $x, int $y)
@@ -28,9 +28,9 @@ function brainGcd()
     for ($i = START_ROUND; $i <= COUNT_ROUNDS; $i++) {
         $firstNumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
         $secondNumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
-        $LargestDivisor = findLargestDivisor($firstNumberToCheck, $secondNumberToCheck);
+        $largestDivisor = findLargestDivisor($firstNumberToCheck, $secondNumberToCheck);
         $nameGame = 'Find the greatest common divisor of given numbers.';
-        $dataGame[]  = ["{$firstNumberToCheck} {$secondNumberToCheck}", (string) $LargestDivisor];
+        $dataGame[]  = ["{$firstNumberToCheck} {$secondNumberToCheck}", (string) $largestDivisor];
     }
     startGame($nameGame, $dataGame);
 }
