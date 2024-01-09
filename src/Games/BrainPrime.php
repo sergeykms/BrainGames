@@ -10,10 +10,10 @@ const COUNT_ROUNDS = 3;
 use function BrainGames\Engine\startGame;
 
 // Простое число
-function primeNumber(int $NumberToCheck)
+function isPrimeNumber(int $numberToCheck)
 {
-    for ($i = 2; $i < $NumberToCheck; $i++) {
-        if ($NumberToCheck % $i === 0) {
+    for ($i = 2; $i < $numberToCheck; $i++) {
+        if ($numberToCheck % $i === 0) {
             return false;
         }
     }
@@ -26,10 +26,10 @@ function brainPrime()
     $dataGame = [];
 
     for ($i = START_ROUND; $i <= COUNT_ROUNDS; $i++) {
-        $NumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
-        $correctAnswer = primeNumber($NumberToCheck) ? 'yes' : 'no';
+        $numberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
+        $correctAnswer = isPrimeNumber($numberToCheck) ? 'yes' : 'no';
 
-        $dataGame[] = [$NumberToCheck, $correctAnswer];
+        $dataGame[] = [$numberToCheck, $correctAnswer];
     }
     startGame($nameGame, $dataGame);
 }

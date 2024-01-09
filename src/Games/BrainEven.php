@@ -9,9 +9,9 @@ const END_OF_RANGE = 100;
 const START_ROUND = 1;
 const COUNT_ROUNDS = 3;
 
-function even(int $NumberToCheck)
+function isEven(int $numberToCheck)
 {
-    return $NumberToCheck % 2 === 0 ? true : false;
+    return $numberToCheck % 2 === 0;
 }
 
 function brainEven()
@@ -20,9 +20,9 @@ function brainEven()
     $dataGame = [];
 
     for ($i = START_ROUND; $i <= COUNT_ROUNDS; $i++) {
-        $NumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
-        $correctAnswer = even($NumberToCheck) ? 'yes' : 'no';
-        $dataGame[] = [$NumberToCheck, $correctAnswer];
+        $numberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
+        $correctAnswer = isEven($numberToCheck) ? 'yes' : 'no';
+        $dataGame[] = [$numberToCheck, $correctAnswer];
     }
 
     startGame($nameGame, $dataGame);

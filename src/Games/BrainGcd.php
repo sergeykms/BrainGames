@@ -28,9 +28,9 @@ function brainGcd()
     for ($i = START_ROUND; $i <= COUNT_ROUNDS; $i++) {
         $firstNumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
         $secondNumberToCheck = rand(BEGIN_OF_RANGE, END_OF_RANGE);
-        $LargestDivisor = findLargestDivisor($firstNumberToCheck, $secondNumberToCheck);
+        $largestDivisor = findLargestDivisor($firstNumberToCheck, $secondNumberToCheck);
         $nameGame = 'Find the greatest common divisor of given numbers.';
-        $dataGame[]  = ["{$firstNumberToCheck} {$secondNumberToCheck}", (string) $LargestDivisor];
+        $dataGame[]  = ["{$firstNumberToCheck} {$secondNumberToCheck}", (string) $largestDivisor];
     }
     startGame($nameGame, $dataGame);
 }
