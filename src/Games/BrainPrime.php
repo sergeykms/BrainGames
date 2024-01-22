@@ -3,7 +3,7 @@
 namespace BrainGames\Games\BrainPrime;
 
 const BEGIN_OF_RANGE = 1;
-const END_OF_RANGE = 500;
+const END_OF_RANGE = 1;
 const START_ROUND = 1;
 
 use function BrainGames\Engine\startGame;
@@ -12,6 +12,7 @@ use const BrainGames\Engine\COUNT_ROUNDS;
 // Простое число
 function isPrimeNumber(int $numberToCheck)
 {
+    if($numberToCheck <= 1) return false;
     for ($i = 2; $i < $numberToCheck; $i++) {
         if ($numberToCheck % $i === 0) {
             return false;
